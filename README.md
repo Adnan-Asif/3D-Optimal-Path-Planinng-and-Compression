@@ -50,7 +50,8 @@ fig.2.2 - Optimal path through the empty regions.
     - their mesh is rendered
   -Hence, to visualize any object pass its vertices, edges and/or faces to display function.
 - Displaying Vertices: Directly send the Vertices if in an iterable data type.
-- Displaying Connected Edges with Vertices only: If Vertices are in the order of connectivity then use the get_edges function with the length of the 
+- Displaying Connected Edges with Vertices only: If Vertices are in the order of connectivity then use the get_edges function with the length of the vertices list passed to it to obtain a list of edge tuples for that set of vertices. Now, you can send the vertices and edges collection to display a mesh.
+- Displaying Regions: To obtain the vertices and faces for this regions, use the get_Vertices_Faces function to obtain the Vertices and Faces lists nested in the return list of this function at index 0 and 1 respectively. Now pass these faces and edges to display the regions (as cubes).
 
 # References 
 1) Marshall Bern, Paul Plassmann, in Handbook of Computational Geometry, 2000
