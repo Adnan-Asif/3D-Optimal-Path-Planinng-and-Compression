@@ -154,6 +154,7 @@ class Octree:
 
 
     def level_points(self, level:int, lst):
+        
         if self.lvl <= level:
             if self.type == 'region':
                 for key in self.children.keys():
@@ -167,6 +168,7 @@ class Octree:
         return lst 
 
     def getOctreeRegions(self, level: int, lst ):
+        
         if self.lvl <= level:
             if self.type == 'region':
                 lst.append(((self.LowerBound.x, self.LowerBound.y, self.LowerBound.z), (self.UpperBound.x, self.UpperBound.y, self.UpperBound.z)))
@@ -179,6 +181,7 @@ class Octree:
         return lst 
     
     def getEmptyRegions(self, level: int = max_depth , lst = []):
+        
         if self.lvl <= level:
             for key in self.children.keys():
                 if self.children[key] == None:
