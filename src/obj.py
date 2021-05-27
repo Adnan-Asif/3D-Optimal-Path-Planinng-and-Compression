@@ -1,5 +1,11 @@
 #import bpy
 
+def get_edges(length):
+    edges = []
+    for i in range(0,length-1):
+        edges.append((i,i+1))
+    return edges 
+
 def get_Vertices_Faces(regions):
     region_vertices = []
     region_faces = []
@@ -56,14 +62,18 @@ def get_Vertices_Faces(regions):
     
     return (region_vertices,region_faces)
 
-def display(vertices, faces = None) -> None:
+def display(vertices, edges = None, faces = None) -> None:
     mymesh = bpy.data.meshes.new("obj")
     myobj = bpy.data.objects.new("obj", mymesh)
     myobj.location = bpy.context.scene.cursor.location
     bpy.context.collection.objects.link(myobj)
-    
-    if faces:
+   
+    if (faces and edges):
+        mymesh.from_pydata(vertices, edges, faces)
+    elif faces:
         mymesh.from_pydata(vertices, [], faces)
+    elif edges:
+        mymesh.from_pydata(vertices, edges, [])
     else:
         mymesh.from_pydata(vertices, [], [])
 
@@ -106,7 +116,31 @@ class obj:
         
    
         
-region_vertices, region_faces = get_Vertices_Faces(tree_regions)
-                        
+'''
+oct = Octree(-10, -10, -10, 10, 10, 10)    
+t1 = obj("C:\\Users\\batoo\\Documents\\HU\\DS2\\map_1.obj")
+t1.store(oct)                        
 
-   
+EmptyRegions =  oct.getEmptyRegions(5,[]) #loading empty regions
+Graph = createGraph(EmptyRegions) #creating graph of empty regions
+#now defining starting and goal points in the form (x,y,z)
+
+Starting = (10, -25, -50)
+Goal = (80, 40, 50) 
+
+x = getClosestEmptyRegion(Graph, Starting)
+y = getClosestEmptyRegion (Graph, Goal) 
+
+path = list()
+path = FindShortestPath(Graph, x, y)
+
+path2 = [((region[0][0] + region[1][0])/2 , (region[0][1] + region[1][1])/2, (region[0][2] + region[1][2])/2) for region in path]
+path2.insert(0, Starting)
+path2.append(Goal)
+
+path_edges = get_edges(len(path2))
+
+display(path2, path_edges)
+path_vertices, path_faces = get_Vertices_Faces(path)
+display(path_vertices, None, path_edges)
+'''
