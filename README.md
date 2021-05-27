@@ -12,9 +12,9 @@ We aimed to execute 3D data compression using Octree Data Struture and implement
 # 3D Data Compression through Octrees
 The increasing amount of geometric information acquired with 3D scanners gives rise to an equally growing demand for data representations that allow for efficient and compact storage as well as transfer of this data(2). Octrees allow significant compression of 3D data through repeated divisions of the space into 8 octants, untill the region optained has uniform/similar characteristics. So the nodes/leaf correspond to those blocks of the array for which no further subdivision is necessary. We came up with a program that takes in image mesh and stores it into Octrees and gives compressed data as the outcome. The image we used had 76000+ vertices, after compression the number dropped down to 46000 vertices. 
 
-![Here, orignal image](image name)
-<img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/Octree_visualization.jpeg" alt="alt text" width="200" >
-![Here, compressed image](image name)
+<img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/orignal.jpeg" alt="alt text" width="400" >
+<img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/Octree_visualization.jpeg" alt="alt text" width="400" >
+<img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/compressed.jpeg" alt="alt text" width="400" >
 
 # 3D Optimal Path planning 
 Path planning is a computational problem to find a sequence of valid configurations that moves the object from the source to destination. In our approach, we use octrees to represent every object in the environment and calculate the empty regions. We then use a complex version of Dijkstra Algorithm for the point to navigate through the nodes which contain empty regions. The program takes in the distance to every region and takes the shortest path for navigation. 
