@@ -43,6 +43,9 @@ class Octree:
             self.Center = Point((self.UpperBound.x + self.LowerBound.x)/2 , (self.UpperBound.y + self.LowerBound.y)/2, (self.UpperBound.z + self.LowerBound.z)/2  )
 
     def Add(self, point: Point) -> None:
+        '''
+            recursive function to add new point in the octree
+        '''
 
         # print("Lower Bound ", self.LowerBound.x , self.LowerBound.y, self.LowerBound.z)
         # print("Upper Bound ", self.UpperBound.x , self.UpperBound.y, self.UpperBound.z)
@@ -154,6 +157,9 @@ class Octree:
 
 
     def level_points(self, level:int, lst):
+        '''
+            returns a list of all the point nodes present in the tree up to the given level proivded in argumnet.
+        '''
         
         if self.lvl <= level:
             if self.type == 'region':
@@ -168,7 +174,9 @@ class Octree:
         return lst 
 
     def getOctreeRegions(self, level: int, lst ):
-        
+        '''
+            returns a list of all the region nodes present in the tree up to the given level proivded in argumnet.
+        '''
         if self.lvl <= level:
             if self.type == 'region':
                 lst.append(((self.LowerBound.x, self.LowerBound.y, self.LowerBound.z), (self.UpperBound.x, self.UpperBound.y, self.UpperBound.z)))
@@ -181,7 +189,9 @@ class Octree:
         return lst 
     
     def getEmptyRegions(self, level: int = max_depth , lst = []):
-        
+        '''
+            returns a list of all the empty nodes present in the tree up to the given level proivded in argumnet.
+        '''
         if self.lvl <= level:
             for key in self.children.keys():
                 if self.children[key] == None:
