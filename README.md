@@ -56,6 +56,6 @@ fig.2.2 - Optimal path through the empty regions.
 # References 
 1) Marshall Bern, Paul Plassmann, in Handbook of Computational Geometry, 2000
 2) Ruwen Schnabel and Reinhard Klein, Octree-based Point-Cloud Compression, Institut für Informatik II, Universität Bonn, Germany.
-The obj files used in this project are from:
+- The obj files used in this project are from:
 1) cgftraders
 2) Viewport Datalabs International
