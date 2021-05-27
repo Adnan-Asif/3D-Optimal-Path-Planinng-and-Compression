@@ -53,7 +53,6 @@ def getDistance(p1, p2, p3, p4) -> float:
 def getDistancePointToRegion(point, region):
     ''' point = (x, y, z)
         region = ((x1, y1, z1), (x2, y2, z2))
-
     '''
 
     c = ((region[0][0] + region[1][0])/2 , (region[0][1] + region[1][1])/2, (region[0][2] + region[1][2])/2)
@@ -62,6 +61,7 @@ def getDistancePointToRegion(point, region):
 
 
 def getClosestEmptyRegion(Graph, point) -> tuple:
+    
     _min = math.inf
     region = None 
 
@@ -103,6 +103,7 @@ def createGraph(lst):
 '''
 
 def getEdges(Graph : dict):
+    
     edges = list()
     for node in Graph:
         for i in node:
@@ -114,6 +115,7 @@ def getEdges(Graph : dict):
 
 
 def FindPath(Graph, StartingPoint, Goal, check ,path) -> list:
+    
     check.add(StartingPoint)
 
     path.append(StartingPoint)
@@ -131,6 +133,7 @@ def FindPath(Graph, StartingPoint, Goal, check ,path) -> list:
     return False
 
 def minNode(Q):
+    
     _min = Q[0]
     for i in Q:
         if i[2]< _min[2]:
@@ -138,12 +141,14 @@ def minNode(Q):
     return _min
 
 def Q_update(Q,a,b,n):
+    
     for i in Q:
         if i[1]==b:
             i[0]=a
             i[2]= n
 
 def FindShortestPath(Graph, start, end):
+    
     visited = list()
     d = dict()
     Q = list()
