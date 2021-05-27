@@ -42,7 +42,12 @@ fig.2.2 - Optimal path through the empty regions.
 - It saves time and computing energy as through Octrees we get regions which are mostly a big group of points so going from one empty region to another  instead of traversing through points.
 -  Our approach can be cost efficient for 3D data planning for navigating machines such as drones etc, as as the path planning for the machines would be easier when it has to navigate from one empty region to another as instead of calculating if every next point it moves to is empty or not, it just has to see if there is an empty region and can go through it without an hurdle in the way.  This reduces our need for complex mechanisms and huge computing power which basically saves us from using expensive hardware. 
 
-
+# Running, Testing and Visualizing on Blender
+- Import the blender (bpy) module in your python script
+- src/obj.py/ display(vertices, edges = None, faces = None) : It is the main function where vertices, edges and/or faces are passed in the form of lists for vertices and nested lists for edges and faces so that a 
+-- a mesh is created for them
+-- their mesh is rendered
+Hence, to visualize any object pass its vertices, edges and/or faces to display function.
 
 # References 
 1) Marshall Bern, Paul Plassmann, in Handbook of Computational Geometry, 2000
