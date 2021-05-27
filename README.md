@@ -1,6 +1,6 @@
 # 3D-Optimal-Path-Planinng-and-Compression
 Final Project repository of _team_ Data-Condtionals for the course CS-201
-# [Final presentation of the Project](https://youtu.be/rSp-nERTqtY)
+# [Final presentation of the Project](https://www.youtube.com/watch?v=QFAP7ErBFS8)
 
 # Octree 
 An octree is the natural generalization of a quadtree. An initial bounding cube is split into eight congruent cubes, each of which is split recursively until each minimal cube intersects the domain Ω in a simple wway (1). The structure is mostly used for 3D data compression, mesh generation, frustum culling, collision detection, path navigation in robotics, spatial indexing and other feilds where 3-dimensional data handling is significant. 
@@ -28,8 +28,11 @@ fig.1.3 - Image compressed with 46000 vertices.
 Path planning is a computational problem to find a sequence of valid configurations that moves the object from the source to destination. In our approach, we use octrees to represent every object in the environment and calculate the empty regions. We then use a complex version of Dijkstra Algorithm for the point to navigate through the nodes which contain empty regions. The program takes in the distance to every region and takes the shortest path for navigation. 
 
 <img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/empty_regions.jpeg" alt="alt text" width="400" >
+
 fig.2.1 - Empty regions calculated through Octree
+
 <img src="https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/path.jpeg" alt="alt text" width="400" >
+
 fig.2.2 - Optimal path through the empty regions.
 
 # Advantages/Significance of Our approach 
