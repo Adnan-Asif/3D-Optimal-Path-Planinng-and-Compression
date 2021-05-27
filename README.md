@@ -44,10 +44,13 @@ fig.2.2 - Optimal path through the empty regions.
 
 # Running, Testing and Visualizing on Blender
 - Import the blender (bpy) module in your python script
-- src/obj.py/ display(vertices, edges = None, faces = None) : It is the main function where vertices, edges and/or faces are passed in the form of lists for vertices and nested lists for edges and faces so that a 
-  - a mesh is created for them
-  - their mesh is rendered
-Hence, to visualize any object pass its vertices, edges and/or faces to display function.
+- src/obj.py/ display(vertices, edges = None, faces = None) : 
+  -It is the main function where vertices, edges and/or faces are passed in the form of lists for vertices and nested lists for edges and faces so that a 
+    - a mesh is created for them
+    - their mesh is rendered
+  -Hence, to visualize any object pass its vertices, edges and/or faces to display function.
+- Displaying Vertices: Directly send the Vertices if in an iterable data type.
+- Displaying Connected Edges with Vertices only: If Vertices are in the order of connectivity then use the get_edges function with the length of the 
 
 # References 
 1) Marshall Bern, Paul Plassmann, in Handbook of Computational Geometry, 2000
