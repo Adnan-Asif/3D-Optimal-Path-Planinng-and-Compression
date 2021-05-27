@@ -13,7 +13,7 @@ We aimed to execute 3D data compression using Octree Data Struture and implement
 The increasing amount of geometric information acquired with 3D scanners gives rise to an equally growing demand for data representations that allow for efficient and compact storage as well as transfer of this data(2). Octrees allow significant compression of 3D data through repeated divisions of the space into 8 octants, untill the region optained has uniform/similar characteristics. So the nodes/leaf correspond to those blocks of the array for which no further subdivision is necessary. We came up with a program that takes in image mesh and stores it into Octrees and gives compressed data as the outcome. The image we used had 76000+ vertices, after compression the number dropped down to 46000 vertices. 
 
 ![Here, orignal image](image name)
-![Here, divided into boxes image](image name)
+![Here, divided into boxes image](https://github.com/Adnan-Asif/3D-Optimal-Path-Planinng-and-Compression/blob/main/imgs/Octree_visualization.jpeg)
 ![Here, compressed image](image name)
 
 # 3D Optimal Path planning 
