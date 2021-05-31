@@ -1,4 +1,9 @@
 class Point:
+    
+    '''
+    This represents a Point in and Octree, 
+    since working with 3 Dimensions, we have (x,y,z)
+    '''
 
     def __init__(self, x: float = None, y: float = None, z: float =  None ) -> None:
         self.x = x
@@ -7,6 +12,17 @@ class Point:
 
 
 class Octree:
+    '''
+    This is the main Octree class, 
+    this is what helps in compression. The max-depth 
+    represents the maximum level the tree can go down to. 
+    
+    This class has 4 main functions 
+    1. Add -> This adds nodes in the Octree 
+    2. level_points -> This returns all the nodes in the Octree till a given level 
+    3. getRegionNodes -> This returns all the regions till a certain level 
+    4. getEmptyRegions -> This returns all the empty regions in the space
+    '''
 
     max_depth = 10 
 
