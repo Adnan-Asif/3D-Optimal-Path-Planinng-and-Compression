@@ -43,12 +43,13 @@ fig.2.2 - Optimal path through the empty regions.
 -  Our approach can be cost efficient for 3D data planning for navigating machines such as drones etc, as as the path planning for the machines would be easier when it has to navigate from one empty region to another as instead of calculating if every next point it moves to is empty or not, it just has to see if there is an empty region and can go through it without an hurdle in the way.  This reduces our need for complex mechanisms and huge computing power which basically saves us from using expensive hardware. 
 
 # Running, Testing and Visualizing on Blender
+- Install and set up blender and make sure that it is compaitible to work with python scripts.
 - Import the blender (bpy) module in your python script
 - src/obj.py/ display(vertices, edges = None, faces = None) : 
-  -It is the main function where vertices, edges and/or faces are passed in the form of lists for vertices and nested lists for edges and faces so that a 
+  - It is the main function where vertices, edges and/or faces are passed in the form of lists for vertices and nested lists for edges and faces so that a 
     - a mesh is created for them
     - their mesh is rendered
-  -Hence, to visualize any object pass its vertices, edges and/or faces to display function.
+  - Hence, to visualize any object pass its vertices, edges and/or faces to display function.
 - Displaying Vertices: Directly send the Vertices if in an iterable data type.
 - Displaying Connected Edges with Vertices only: If Vertices are in the order of connectivity then use the get_edges function with the length of the vertices list passed to it to obtain a list of edge tuples for that set of vertices. Now, you can send the vertices and edges collection to display a mesh.
 - Displaying Regions: To obtain the vertices and faces for this regions, use the get_Vertices_Faces function to obtain the Vertices and Faces lists nested in the return list of this function at index 0 and 1 respectively. Now pass these faces and edges to display the regions (as cubes).
