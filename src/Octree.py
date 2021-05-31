@@ -60,7 +60,15 @@ class Octree:
 
     def Add(self, point: Point) -> None:
         '''
-            recursive function to add new point in the octree
+        Args:
+        1. point -> Point object to be added in the Octree 
+        
+        Function:
+        Recursively divides Octree untill the correct 
+        position of the point is reached, and then adds the 
+        point at that location. 
+        
+        Returns -> None 
         '''
 
         # print("Lower Bound ", self.LowerBound.x , self.LowerBound.y, self.LowerBound.z)
