@@ -1,4 +1,4 @@
-# 3D-Optimal-Path-Planinng-and-Compression
+# 3D-Optimal-Path-Planning-and-Compression
 Final Project repository of _team_ Data-Condtionals for the course CS-201
 # [Final presentation of the Project](https://www.youtube.com/watch?v=QFAP7ErBFS8)
 
