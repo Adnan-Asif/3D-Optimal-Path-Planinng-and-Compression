@@ -1,4 +1,4 @@
-#This file contains all the classes and faces used to obtain the object files, store them as octrees and then display their original or compressed versions on blender
+#This file contains all the classes and functions used to obtain the object files, store them as octrees and then display their original or compressed versions on blender
 #import bpy
 
 def get_edges(length):
